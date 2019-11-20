@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
 
+import { MatInputModule, MatCardModule, MatButtonModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +13,10 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
