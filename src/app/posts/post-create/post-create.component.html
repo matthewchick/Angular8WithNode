@@ -1,6 +1,6 @@
 <mat-card>
   <mat-form-field>
-    <!-- Two ways binding -->
+    <!-- Two ways binding like react's state-->
     <textarea matInput rows="6" [(ngModel)]="enteredValue" ></textarea>
     <!--property binding-->
     <!--textarea matInput rows="6" [value]="newPost" #postInput></textarea -->
@@ -9,7 +9,7 @@
   <!--event binding -->
   <button mat-raised-button
     color="primary"
-    (click)="onAddPost(postInput)">Save Post</button>
+    (click)="onAddPost()">Save Post</button>
 </mat-card>
 <!-- string interpolation-->
 <p>{{ newPost }}</p>
