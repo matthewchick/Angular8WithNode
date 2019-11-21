@@ -1,5 +1,7 @@
 <app-header></app-header>
 <main>
+  <!-- event binding -->
   <app-post-create (postCreated)="onPostAdded($event)"></app-post-create>
+  <!-- property binding output storedPosts to posts -->
   <app-post-list [posts]="storedPosts"></app-post-list>
 </main>

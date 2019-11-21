@@ -8,9 +8,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 export class PostCreateComponent implements OnInit {
   enteredTitle = '';
   enteredContent = '';
-  // @Output is a decorator
-  @Output() postCreated = new EventEmitter();   // pass postCreated to another component
-
+  // @Output is a decorator pass postCreated to another component
+  @Output() postCreated = new EventEmitter();
 
   onAddPost() {
     // create a post object
