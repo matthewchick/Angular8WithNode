@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Post } from '../post.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-post-create',
@@ -12,11 +13,14 @@ export class PostCreateComponent implements OnInit {
   // @Output is a decorator pass postCreated to another component
   @Output() postCreated = new EventEmitter<Post>();
 
-  onAddPost() {
+  onAddPost(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
     // create a post object
     const post: Post = {
-      title: this.enteredTitle,
-      content: this.enteredContent
+      title: form.value.title,
+      content: form.value.content
     };
     this.postCreated.emit(post);      // emit post data to outside
   }
