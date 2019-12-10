@@ -8,8 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent implements OnInit {
-  enteredTitle = '';
-  enteredContent = '';
+
   // @Output is a decorator pass postCreated to another component
   @Output() postCreated = new EventEmitter<Post>();
 
@@ -22,12 +21,12 @@ export class PostCreateComponent implements OnInit {
       title: form.value.title,
       content: form.value.content
     };
-    this.postCreated.emit(post);      // emit post data to outside
+    // emit post data to outside
+    this.postCreated.emit(post);
   }
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
